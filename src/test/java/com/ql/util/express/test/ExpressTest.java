@@ -1,9 +1,14 @@
 package com.ql.util.express.test;
 
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONUtil;
 import com.ql.util.express.ExpressRunner;
 import com.ql.util.express.IExpressContext;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class ExpressTest {
     @Test
@@ -116,5 +121,10 @@ public class ExpressTest {
             System.out.println("Example " + point + " : " + expressStr + " = " + result);
         }
         System.out.println(expressContext);
+    }
+
+    public static void main(String[] args) {
+        final List<String> split = StrUtil.split("a", ',');
+        System.out.println(JSONUtil.toJsonStr(split));
     }
 }
